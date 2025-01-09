@@ -26,9 +26,9 @@ public class NoteConfiguration : IEntityTypeConfiguration<Note>
             .HasColumnName("title");
 
         builder
-            .Property(note => note.Description)
+            .Property(note => note.Details)
             .HasMaxLength(1000)
-            .HasColumnName("description");
+            .HasColumnName("details");
 
         builder
             .Property(note => note.CreationDate)
