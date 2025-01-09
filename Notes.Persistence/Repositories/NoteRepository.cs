@@ -2,6 +2,7 @@
 using Notes.Application.Common.Exceptions;
 using Notes.Application.Notes.Commands.UpdateNote;
 using Notes.Application.Notes.Queries.GetNoteDetails;
+using Notes.Application.Notes.Queries.GetNoteList;
 using Notes.Application.Repositories;
 using Notes.Domain;
 
@@ -69,9 +70,15 @@ public class NoteRepository(NotesDbContext context) : INoteRepository
         return note;
     }
 
-    public async Task<IList<Note>> GetNotesByUserIdAsync(Guid userId, CancellationToken cancellationToken)
+    public async Task<IList<NoteListDto>> GetNotesByUserIdAsync(Guid userId, CancellationToken cancellationToken)
     {
         var notes = await context.Notes
+            .Select(note => new NoteListDto
+            { 
+                Id = note.Id,
+                UserId = note.UserId,
+                Title = note.Title,
+            })
             .Where(note => note.UserId == userId)
             .AsNoTracking()
             .ToListAsync(cancellationToken);
