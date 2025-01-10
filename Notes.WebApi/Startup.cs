@@ -1,7 +1,6 @@
 ﻿using Notes.Application;
-using Notes.Application.Common.Mappings;
 using Notes.Persistence;
-using System.Reflection;
+using Notes.WebApi.Middleware;
 
 namespace Notes.WebApi;
 
@@ -11,11 +10,6 @@ public class Startup(IConfiguration configuration)
 
     public void ConfigureServices(IServiceCollection services)
     {
-        services.AddAutoMapper(config =>
-        {
-            config.AddProfile(new AssemblyMappingProfile(Assembly.GetExecutingAssembly()));
-        });
-
         services.AddApplication();
         services.AddPersistence(configuration);
 
@@ -38,6 +32,7 @@ public class Startup(IConfiguration configuration)
             app.UseDeveloperExceptionPage();
         }
 
+        app.UseCustomExceptionHandler();
         app.UseRouting();
         app.UseHttpsRedirection();
         app.UseCors(namePolicy);
