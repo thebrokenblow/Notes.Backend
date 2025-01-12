@@ -25,6 +25,8 @@ public class Startup(IConfiguration configuration)
             });
         });
 
+        services.AddSwaggerGen();
+
         services.AddAuthentication(config =>
         {
             config.DefaultAuthenticateScheme =
@@ -45,6 +47,13 @@ public class Startup(IConfiguration configuration)
         {
             app.UseDeveloperExceptionPage();
         }
+
+        app.UseSwagger();
+        app.UseSwaggerUI(config =>
+        {
+            config.RoutePrefix = string.Empty;
+            config.SwaggerEndpoint("swagger/v1/swagger.json", "Notes API");
+        });
 
         app.UseCustomExceptionHandler();
 
