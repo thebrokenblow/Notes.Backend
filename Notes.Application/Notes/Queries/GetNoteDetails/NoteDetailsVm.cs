@@ -4,7 +4,7 @@ using Notes.Domain;
 
 namespace Notes.Application.Notes.Queries.GetNoteDetails;
 
-public class NoteDetailsVm : IMapWith<Note>
+public class NoteDetailsVm : IMapWith<NoteDetailsDto>
 {
     public required Guid Id { get; set; }
     public required string Title { get; set; }

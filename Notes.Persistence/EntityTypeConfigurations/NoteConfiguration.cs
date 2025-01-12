@@ -6,8 +6,14 @@ namespace Notes.Persistence.EntityTypeConfigurations;
 
 public class NoteConfiguration : IEntityTypeConfiguration<Note>
 {
+    private const int maxLengthTitle = 250;
+    private const int maxLengthDetails = 1000;
+
     public void Configure(EntityTypeBuilder<Note> builder)
     {
+        builder
+           .ToTable("notes");
+
         builder
             .HasKey(note => note.Id);
 
@@ -22,12 +28,13 @@ public class NoteConfiguration : IEntityTypeConfiguration<Note>
         builder
             .Property(note => note.Title)
             .IsRequired()
-            .HasMaxLength(250)
+            .HasMaxLength(maxLengthTitle)
             .HasColumnName("title");
 
         builder
             .Property(note => note.Details)
-            .HasMaxLength(1000)
+            .IsRequired()
+            .HasMaxLength(maxLengthDetails)
             .HasColumnName("details");
 
         builder

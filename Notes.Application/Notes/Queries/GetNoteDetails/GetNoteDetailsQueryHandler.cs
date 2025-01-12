@@ -10,7 +10,13 @@ public class GetNoteDetailsQueryHandler(INoteRepository noteRepository, IMapper 
     {
         var note = await noteRepository.GetByIdNoTrackingAsync(request.Id, request.UserId, cancellationToken);
 
-        var noteDetailsVm = mapper.Map<NoteDetailsVm>(note);
+        var noteDetailsVm = new NoteDetailsVm
+        {
+            Id = note.Id,
+            Title = note.Title,
+            Details = note.Details,
+            CreationDate = note.CreationDate,
+        };
 
         return noteDetailsVm;
     }

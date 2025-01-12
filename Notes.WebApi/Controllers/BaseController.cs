@@ -17,21 +17,23 @@ public abstract class BaseController : ControllerBase
 
         _mediator = mediator;
 
-        if (User.Identity is null)
-        {
-            throw new NullReferenceException();
-        }
+        //if (User.Identity is null)
+        //{
+        //    throw new NullReferenceException();
+        //}
 
-        if (!User.Identity.IsAuthenticated)
-        {
-            UserId = Guid.Empty;
-        }
-        else
-        {
-            var claim = User.FindFirst(ClaimTypes.NameIdentifier) 
-                ?? throw new NullReferenceException();
+        //if (!User.Identity.IsAuthenticated)
+        //{
+        //    UserId = Guid.Empty;
+        //}
+        //else
+        //{
+        //    var claim = User.FindFirst(ClaimTypes.NameIdentifier) 
+        //        ?? throw new NullReferenceException();
 
-            UserId = Guid.Parse(claim.Value);
-        }
+        //    UserId = Guid.Parse(claim.Value);
+        //}
+
+        UserId = Guid.Empty;
     }
 }

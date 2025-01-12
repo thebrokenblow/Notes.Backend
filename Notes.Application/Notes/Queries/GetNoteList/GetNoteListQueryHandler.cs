@@ -1,5 +1,4 @@
 ﻿using AutoMapper;
-using AutoMapper.QueryableExtensions;
 using MediatR;
 using Notes.Application.Repositories;
 
@@ -11,13 +10,22 @@ public class GetNoteListQueryHandler(INoteRepository noteRepository, IMapper map
     {
         var notes = await noteRepository.GetNotesByUserIdAsync(request.UserId, cancellationToken);
 
-        var noteLookupDto = notes
-            .AsQueryable()
-            .ProjectTo<NoteLookupDto>(mapper.ConfigurationProvider).ToList();
+        var noteLookupDtos = new List<NoteLookupDto>();
+
+        for (int i = 0; i < notes.Count; i++)
+        {
+            var noteLookupDto = new NoteLookupDto
+            {
+                Id = notes[i].Id,
+                Title = notes[i].Title,
+            };
+
+            noteLookupDtos.Add(noteLookupDto);
+        }
 
         return new NoteListVm
         {
-            Notes = noteLookupDto
+            Notes = noteLookupDtos
         };
     }
 }

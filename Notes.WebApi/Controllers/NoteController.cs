@@ -1,5 +1,6 @@
 ﻿using AutoMapper;
 using MediatR;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using Notes.Application.Notes.Commands.CreateNote;
 using Notes.Application.Notes.Commands.DeleteCommand;
@@ -10,10 +11,12 @@ using Notes.WebApi.Model;
 
 namespace Notes.WebApi.Controllers;
 
-
+[Route("api/[controller]")]
 public class NoteController(IMediator mediator, IMapper mapper) : BaseController(mediator)
 {
-    [Route("api/[controller]")]
+
+    [HttpGet]
+    //[Authorize]
     public async Task<ActionResult<NoteListVm>> GetAll()
     {
         var query = new GetNoteListQuery
@@ -27,6 +30,7 @@ public class NoteController(IMediator mediator, IMapper mapper) : BaseController
     }
 
     [HttpGet("{id}")]
+    [Authorize]
     public async Task<ActionResult<NoteDetailsVm>> Get(Guid id)
     {
         var query = new GetNoteDetailsQuery
@@ -41,6 +45,7 @@ public class NoteController(IMediator mediator, IMapper mapper) : BaseController
     }
 
     [HttpPost]
+    [Authorize]
     public async Task<ActionResult<Guid>> Create([FromBody] CreateNoteModelDto createNoteDto)
     {
         var command = mapper.Map<CreateNoteCommand>(createNoteDto);
@@ -52,6 +57,7 @@ public class NoteController(IMediator mediator, IMapper mapper) : BaseController
     }
 
     [HttpPut]
+    [Authorize]
     public async Task<ActionResult<Guid>> Update([FromBody] UpdateNoteModelDto updateNoteModelDto)
     {
         var command = mapper.Map<UpdateNoteCommand>(updateNoteModelDto);
@@ -62,6 +68,7 @@ public class NoteController(IMediator mediator, IMapper mapper) : BaseController
         return NoContent();
     }
 
+    [Authorize]
     public async Task<IActionResult> Delete(Guid id)
     {
         var command = new DeleteNoteCommand
