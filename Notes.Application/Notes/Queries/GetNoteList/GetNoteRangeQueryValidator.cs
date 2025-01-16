@@ -2,9 +2,9 @@
 
 namespace Notes.Application.Notes.Queries.GetNoteList;
 
-public class GetNoteListQueryValidator : AbstractValidator<GetNoteListQuery>
+public class GetNoteRangeQueryValidator : AbstractValidator<GetNoteRangeQuery>
 {
-    public GetNoteListQueryValidator()
+    public GetNoteRangeQueryValidator()
     {
         RuleFor(noteList => 
                     noteList.UserId)

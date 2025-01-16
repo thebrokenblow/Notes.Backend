@@ -18,7 +18,7 @@ public class GetNoteDetailsQueryHandlerTests(QueryTestFixture fixture)
         // Arrange
         
         var noteRepository = new NoteRepository(Context);
-        var handler = new GetNoteDetailsQueryHandler(noteRepository, Mapper);
+        var handler = new GetNoteDetailsQueryHandler(noteRepository);
 
         // Act
         var result = await handler.Handle(

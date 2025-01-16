@@ -18,19 +18,21 @@ public class GetNoteListQueryHandlerTests(QueryTestFixture fixture)
         // Arrange
 
         var noteRepository = new NoteRepository(Context);
-        var handler = new GetNoteListQueryHandler(noteRepository, Mapper);
+        var handler = new GetNoteRangeHandler(noteRepository);
 
         // Act
         
         var result = await handler.Handle(
-            new GetNoteListQuery
+            new GetNoteRangeQuery
             {
+                CountSkip = 0,
+                CountTake = 2,
                 UserId = NotesContextFactory.UserBId
             },
             CancellationToken.None);
         
         // Assert
 
-        Assert.Equal(2, result.Notes.Count);
+        Assert.Equal(1, result.Count);
     }
 }

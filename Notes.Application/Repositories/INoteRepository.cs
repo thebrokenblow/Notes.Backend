@@ -9,8 +9,7 @@ public interface INoteRepository
 {
     Task AddAsync(Note note, CancellationToken cancellationToken);
     Task DeleteAsync(Guid id, Guid userId, CancellationToken cancellationToken);
-    Task<Note> GetByIdTrackingAsync(Guid id, Guid userId, CancellationToken cancellationToken);
-    Task<NoteDetailsDto> GetByIdNoTrackingAsync(Guid id, Guid userId, CancellationToken cancellationToken);
     Task UpdateAsync(UpdateNoteDto updateNoteDto, CancellationToken cancellationToken);
-    Task<IList<NoteListDto>> GetNotesByUserIdAsync(Guid userId, CancellationToken cancellationToken);
+    Task<NoteDetailsVm> GetDetailsByIdAsync(Guid id, Guid userId, CancellationToken cancellationToken);
+    Task<List<NoteItemVmDto>> GetRangeByUserIdAsync(Guid userId, int countSkip, int countTake, CancellationToken cancellationToken);
 }

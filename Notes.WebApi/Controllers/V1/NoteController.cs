@@ -7,30 +7,33 @@ using Notes.Application.Notes.Commands.UpdateNote;
 using Notes.Application.Notes.Queries.GetNoteDetails;
 using Notes.Application.Notes.Queries.GetNoteList;
 
-namespace Notes.WebApi.Controllers;
+namespace Notes.WebApi.Controllers.V1;
 
+[ApiVersion("1.0")]
 [Produces("application/json")]
-[Route("api/[controller]")]
+[Route("api/{version:apiVersion}/[controller]")]
 public class NoteController(IMediator mediator) : BaseController(mediator)
 {
     /// <summary>
-    /// Gets the list of notes
+    /// Gets the range of notes
     /// </summary>
     /// <remarks>
     /// Sample request:
     /// GET /note
     /// </remarks>
-    /// <returns>Returns NoteListVm</returns>
+    /// <returns>Returns List<NoteItemVm></returns>
     /// <response code="200">Success</response>
     /// <response code="401">If the user is unauthorized</response>
-    [HttpGet]
+    [HttpGet("{countSkip}/{countTake}")]
     [Authorize]
     [ProducesResponseType(StatusCodes.Status201Created)]
     [ProducesResponseType(StatusCodes.Status401Unauthorized)]
-    public async Task<ActionResult<NoteListVm>> GetAll()
+    public async Task<ActionResult<List<NoteItemVm>>> GetRange(int countSkip, int countTake)
     {
-        var query = new GetNoteListQuery
+        var query = new GetNoteRangeQuery
         {
+            CountSkip = countSkip,
+            CountTake = countTake,
             UserId = UserId
         };
 

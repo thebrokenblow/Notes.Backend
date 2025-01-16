@@ -18,7 +18,7 @@ public class NoteRepository(NotesDbContext context) : INoteRepository
 
     public async Task DeleteAsync(Guid id, Guid userId, CancellationToken cancellationToken)
     {
-        var note = await GetByIdTrackingAsync(id, userId, cancellationToken);
+        var note = await GetByIdAsync(id, userId, cancellationToken);
 
         context.Remove(note);
         await context.SaveChangesAsync(cancellationToken);
@@ -26,7 +26,7 @@ public class NoteRepository(NotesDbContext context) : INoteRepository
 
     public async Task UpdateAsync(UpdateNoteDto updateNoteDto, CancellationToken cancellationToken)
     {
-        var note = await GetByIdTrackingAsync(updateNoteDto.Id, updateNoteDto.UserId, cancellationToken);
+        var note = await GetByIdAsync(updateNoteDto.Id, updateNoteDto.UserId, cancellationToken);
 
         note.Details = updateNoteDto.Details;
         note.Title = updateNoteDto.Title;
@@ -35,7 +35,7 @@ public class NoteRepository(NotesDbContext context) : INoteRepository
         await context.SaveChangesAsync(cancellationToken);
     }
 
-    public async Task<Note> GetByIdTrackingAsync(Guid id, Guid userId, CancellationToken cancellationToken)
+    private async Task<Note> GetByIdAsync(Guid id, Guid userId, CancellationToken cancellationToken)
     {
         var note = await context.Notes.FirstOrDefaultAsync(note => note.Id == id, cancellationToken);
 
@@ -47,10 +47,10 @@ public class NoteRepository(NotesDbContext context) : INoteRepository
         return note;
     }
 
-    public async Task<NoteDetailsDto> GetByIdNoTrackingAsync(Guid id, Guid userId, CancellationToken cancellationToken)
+    public async Task<NoteDetailsVm> GetDetailsByIdAsync(Guid id, Guid userId, CancellationToken cancellationToken)
     {
         var note = await context.Notes
-                            .Select(note => new NoteDetailsDto()
+                            .Select(note => new NoteDetailsVm()
                             {
                                 Id = note.Id,
                                 UserId = userId,
@@ -70,15 +70,17 @@ public class NoteRepository(NotesDbContext context) : INoteRepository
         return note;
     }
 
-    public async Task<IList<NoteListDto>> GetNotesByUserIdAsync(Guid userId, CancellationToken cancellationToken)
+    public async Task<List<NoteItemVmDto>> GetRangeByUserIdAsync(Guid userId, int countSkip, int countTake, CancellationToken cancellationToken)
     {
         var notes = await context.Notes
-            .Select(note => new NoteListDto
+            .Select(note => new NoteItemVmDto
             { 
                 Id = note.Id,
                 UserId = note.UserId,
                 Title = note.Title,
             })
+            .Skip(countSkip)
+            .Take(countTake)
             .Where(note => note.UserId == userId)
             .AsNoTracking()
             .ToListAsync(cancellationToken);

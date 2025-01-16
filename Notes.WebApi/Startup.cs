@@ -1,31 +1,33 @@
-﻿using Microsoft.AspNetCore.Authentication.JwtBearer;
-using Notes.Application;
+﻿using Microsoft.AspNetCore.Mvc;
+using Microsoft.AspNetCore.Mvc.ApiExplorer;
+using Microsoft.AspNetCore.Mvc.Versioning;
+using Microsoft.Extensions.Options;
+using Notes.WebApi.Configurations;
+using Swashbuckle.AspNetCore.SwaggerGen;
 using Notes.Persistence;
+using Notes.Application;
+using Microsoft.AspNetCore.Authentication.JwtBearer;
 using Notes.WebApi.Middleware;
 
 namespace Notes.WebApi;
 
 public class Startup(IConfiguration configuration)
 {
-    private const string namePolicy = "AllowAll";
-
     public void ConfigureServices(IServiceCollection services)
     {
         services.AddApplication();
         services.AddPersistence(configuration);
-
         services.AddControllers();
+
         services.AddCors(options =>
         {
-            options.AddPolicy(namePolicy, policy =>
+            options.AddPolicy("AllowAll", policy =>
             {
                 policy.AllowAnyHeader();
                 policy.AllowAnyMethod();
                 policy.AllowAnyOrigin();
             });
         });
-
-        services.AddSwaggerGen();
 
         services.AddAuthentication(config =>
         {
@@ -35,35 +37,56 @@ public class Startup(IConfiguration configuration)
         })
             .AddJwtBearer("Bearer", options =>
             {
-                options.Authority = "https://localhost:7241/";
+                options.Authority = "https://localhost:44386/";
                 options.Audience = "NotesWebAPI";
                 options.RequireHttpsMetadata = false;
             });
+
+        services.AddVersionedApiExplorer(options =>
+            options.GroupNameFormat = "'v'VVV");
+
+        services.AddTransient<IConfigureOptions<SwaggerGenOptions>, ConfigureSwaggerOptions>();
+
+        services.AddSwaggerGen();
+        services.AddApiVersioning(config =>
+        {
+            config.DefaultApiVersion = new ApiVersion(1, 0);
+            config.AssumeDefaultVersionWhenUnspecified = true;
+            config.ReportApiVersions = true;
+            config.ApiVersionReader = ApiVersionReader.Combine(
+                new UrlSegmentApiVersionReader(),
+                new QueryStringApiVersionReader("api-version"),
+                new HeaderApiVersionReader("api-version")
+            );
+        });
     }
 
-    public void Configure(IApplicationBuilder app, IWebHostEnvironment env)
+    public void Configure(IApplicationBuilder app, IWebHostEnvironment env, IApiVersionDescriptionProvider provider)
     {
         if (env.IsDevelopment())
         {
             app.UseDeveloperExceptionPage();
         }
-
         app.UseSwagger();
         app.UseSwaggerUI(config =>
         {
-            config.RoutePrefix = string.Empty;
-            config.SwaggerEndpoint("swagger/v1/swagger.json", "Notes API");
+            foreach (var description in provider.ApiVersionDescriptions)
+            {
+                config.SwaggerEndpoint(
+                    $"/swagger/{description.GroupName}/swagger.json",
+                    description.GroupName.ToUpperInvariant());
+            }
         });
-
         app.UseCustomExceptionHandler();
-
         app.UseRouting();
         app.UseHttpsRedirection();
-        app.UseCors(namePolicy);
+        app.UseCors("AllowAll");
 
         app.UseAuthentication();
         app.UseAuthorization();
-
+        
+        app.UseApiVersioning();
+        
         app.UseEndpoints(endpoints =>
         {
             endpoints.MapControllers();
