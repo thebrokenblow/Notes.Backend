@@ -1,4 +1,5 @@
-﻿using MediatR;
+﻿using Asp.Versioning;
+using MediatR;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using Notes.Application.Notes.Commands.CreateNote;
@@ -11,14 +12,15 @@ namespace Notes.WebApi.Controllers.V1;
 
 [ApiVersion("1.0")]
 [Produces("application/json")]
-[Route("api/{version:apiVersion}/[controller]")]
+[Route("api/v{version:apiVersion}/[controller]")]
+
 public class NoteController(IMediator mediator) : BaseController(mediator)
 {
     /// <summary>
     /// Gets the range of notes
     /// </summary>
     /// <remarks>
-    /// Sample request:
+    /// Sample request: countSkip, countTake
     /// GET /note
     /// </remarks>
     /// <returns>Returns List<NoteItemVm></returns>

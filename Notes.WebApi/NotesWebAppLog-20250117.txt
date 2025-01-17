@@ -1,0 +1,16 @@
+2025-01-17 11:40:25.115 +03:00 [INF] User profile is available. Using 'C:\Users\akrasov\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2025-01-17 11:40:25.541 +03:00 [INF] Now listening on: https://localhost:7085
+2025-01-17 11:40:25.541 +03:00 [INF] Now listening on: http://localhost:5164
+2025-01-17 11:40:25.850 +03:00 [INF] Application started. Press Ctrl+C to shut down.
+2025-01-17 11:40:25.850 +03:00 [INF] Hosting environment: Development
+2025-01-17 11:40:25.850 +03:00 [INF] Content root path: C:\Users\akrasov\Source\Repos\Notes.Backend\Notes.WebApi
+2025-01-17 11:40:25.880 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7085/swagger/index.html - null null
+2025-01-17 11:40:26.046 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7085/swagger/index.html - 200 null text/html;charset=utf-8 170.1919ms
+2025-01-17 11:40:26.222 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7085/_vs/browserLink - null null
+2025-01-17 11:40:26.222 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7085/_framework/aspnetcore-browser-refresh.js - null null
+2025-01-17 11:40:26.222 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7085/swagger/index.js - null null
+2025-01-17 11:40:26.224 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7085/swagger/index.js - 200 null application/javascript;charset=utf-8 1.7556ms
+2025-01-17 11:40:26.234 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7085/_framework/aspnetcore-browser-refresh.js - 200 13776 application/javascript; charset=utf-8 12.0344ms
+2025-01-17 11:40:26.249 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7085/_vs/browserLink - 200 null text/javascript; charset=UTF-8 27.0404ms
+2025-01-17 11:40:26.368 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7085/swagger/v1/swagger.json - null null
+2025-01-17 11:40:26.378 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7085/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 10.1378ms

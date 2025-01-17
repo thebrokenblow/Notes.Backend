@@ -24,6 +24,9 @@ public static class DependencyInjection
             config.AddProfile(new AssemblyMappingProfile(Assembly.GetExecutingAssembly()));
         });
 
+        services.AddTransient(typeof(IPipelineBehavior<,>),
+                typeof(LoggingBehavior<,>));
+
         return services;
     }
 }
