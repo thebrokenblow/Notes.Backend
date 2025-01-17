@@ -46,7 +46,10 @@ public class Startup(IConfiguration configuration)
 
         services.AddTransient<IConfigureOptions<SwaggerGenOptions>, ConfigureSwaggerOptions>();
 
-        services.AddSwaggerGen();
+        services.AddSwaggerGen(c =>
+        {
+            c.DocumentFilter<RemoveDuplicateEndpointsDocumentFilter>();
+        });
 
         services.AddApiVersioning(options =>
         {
@@ -64,6 +67,7 @@ public class Startup(IConfiguration configuration)
         {
             options.GroupNameFormat = "'v'VVV";
             options.SubstituteApiVersionInUrl = true;
+            options.AddApiVersionParametersWhenVersionNeutral = true;
         });
 
         services.AddSingleton<ICurrentUserService, CurrentUserService>();
