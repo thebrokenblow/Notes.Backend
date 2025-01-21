@@ -1,0 +1,347 @@
+2025-01-17 11:40:25.115 +03:00 [INF] User profile is available. Using 'C:\Users\akrasov\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2025-01-17 11:40:25.541 +03:00 [INF] Now listening on: https://localhost:7085
+2025-01-17 11:40:25.541 +03:00 [INF] Now listening on: http://localhost:5164
+2025-01-17 11:40:25.850 +03:00 [INF] Application started. Press Ctrl+C to shut down.
+2025-01-17 11:40:25.850 +03:00 [INF] Hosting environment: Development
+2025-01-17 11:40:25.850 +03:00 [INF] Content root path: C:\Users\akrasov\Source\Repos\Notes.Backend\Notes.WebApi
+2025-01-17 11:40:25.880 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7085/swagger/index.html - null null
+2025-01-17 11:40:26.046 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7085/swagger/index.html - 200 null text/html;charset=utf-8 170.1919ms
+2025-01-17 11:40:26.222 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7085/_vs/browserLink - null null
+2025-01-17 11:40:26.222 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7085/_framework/aspnetcore-browser-refresh.js - null null
+2025-01-17 11:40:26.222 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7085/swagger/index.js - null null
+2025-01-17 11:40:26.224 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7085/swagger/index.js - 200 null application/javascript;charset=utf-8 1.7556ms
+2025-01-17 11:40:26.234 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7085/_framework/aspnetcore-browser-refresh.js - 200 13776 application/javascript; charset=utf-8 12.0344ms
+2025-01-17 11:40:26.249 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7085/_vs/browserLink - 200 null text/javascript; charset=UTF-8 27.0404ms
+2025-01-17 11:40:26.368 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7085/swagger/v1/swagger.json - null null
+2025-01-17 11:40:26.378 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7085/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 10.1378ms
+2025-01-17 12:14:22.560 +03:00 [INF] User profile is available. Using 'C:\Users\akrasov\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2025-01-17 12:14:23.680 +03:00 [INF] Now listening on: https://localhost:7085
+2025-01-17 12:14:23.681 +03:00 [INF] Now listening on: http://localhost:5164
+2025-01-17 12:14:23.750 +03:00 [INF] Application started. Press Ctrl+C to shut down.
+2025-01-17 12:14:23.751 +03:00 [INF] Hosting environment: Development
+2025-01-17 12:14:23.751 +03:00 [INF] Content root path: C:\Users\akrasov\source\repos\Notes.Backend\Notes.WebApi
+2025-01-17 12:14:24.244 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7085/swagger/index.html - null null
+2025-01-17 12:14:24.436 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7085/swagger/index.html - 200 null text/html;charset=utf-8 194.856ms
+2025-01-17 12:14:24.476 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7085/swagger/index.js - null null
+2025-01-17 12:14:24.477 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7085/_framework/aspnetcore-browser-refresh.js - null null
+2025-01-17 12:14:24.479 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7085/swagger/index.js - 200 null application/javascript;charset=utf-8 2.7155ms
+2025-01-17 12:14:24.493 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7085/_framework/aspnetcore-browser-refresh.js - 200 13776 application/javascript; charset=utf-8 16.5096ms
+2025-01-17 12:14:24.529 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7085/_vs/browserLink - null null
+2025-01-17 12:14:24.594 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7085/_vs/browserLink - 200 null text/javascript; charset=UTF-8 65.4561ms
+2025-01-17 12:14:24.763 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7085/swagger/v1/swagger.json - null null
+2025-01-17 12:14:24.774 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7085/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 11.2094ms
+2025-01-17 12:14:54.138 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7085/api/v1/Note/1e790e0d-0430-4aaf-8379-a68eb75111c8 - null null
+2025-01-17 12:14:54.272 +03:00 [INF] Authorization failed. These requirements were not met:
+DenyAnonymousAuthorizationRequirement: Requires an authenticated user.
+2025-01-17 12:14:54.275 +03:00 [INF] AuthenticationScheme: Bearer was challenged.
+2025-01-17 12:14:54.275 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7085/api/v1/Note/1e790e0d-0430-4aaf-8379-a68eb75111c8 - 401 0 null 137.6922ms
+2025-01-17 12:15:17.512 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7085/api/Note/1e790e0d-0430-4aaf-8379-a68eb75111c8 - null null
+2025-01-17 12:15:17.544 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7085/api/Note/1e790e0d-0430-4aaf-8379-a68eb75111c8 - 404 0 null 32.0392ms
+2025-01-17 12:15:17.545 +03:00 [INF] Request reached the end of the middleware pipeline without being handled by application code. Request path: GET https://localhost:7085/api/Note/1e790e0d-0430-4aaf-8379-a68eb75111c8, Response status code: 404
+2025-01-17 13:06:12.306 +03:00 [INF] User profile is available. Using 'C:\Users\akrasov\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2025-01-17 13:06:12.784 +03:00 [INF] Now listening on: https://localhost:7085
+2025-01-17 13:06:12.784 +03:00 [INF] Now listening on: http://localhost:5164
+2025-01-17 13:06:12.859 +03:00 [INF] Application started. Press Ctrl+C to shut down.
+2025-01-17 13:06:12.860 +03:00 [INF] Hosting environment: Development
+2025-01-17 13:06:12.860 +03:00 [INF] Content root path: C:\Users\akrasov\Source\Repos\Notes.Backend\Notes.WebApi
+2025-01-17 13:06:13.569 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7085/swagger/index.html - null null
+2025-01-17 13:06:13.751 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7085/swagger/index.html - 200 null text/html;charset=utf-8 185.9329ms
+2025-01-17 13:06:13.792 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7085/_framework/aspnetcore-browser-refresh.js - null null
+2025-01-17 13:06:13.792 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7085/swagger/index.js - null null
+2025-01-17 13:06:13.793 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7085/swagger/index.js - 200 null application/javascript;charset=utf-8 1.7213ms
+2025-01-17 13:06:13.799 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7085/_framework/aspnetcore-browser-refresh.js - 200 13776 application/javascript; charset=utf-8 7.411ms
+2025-01-17 13:06:13.822 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7085/_vs/browserLink - null null
+2025-01-17 13:06:13.870 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7085/_vs/browserLink - 200 null text/javascript; charset=UTF-8 47.8988ms
+2025-01-17 13:06:13.999 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7085/swagger/v1/swagger.json - null null
+2025-01-17 13:06:14.018 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7085/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 19.2177ms
+2025-01-17 13:08:12.572 +03:00 [INF] User profile is available. Using 'C:\Users\akrasov\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2025-01-17 13:08:12.962 +03:00 [INF] Now listening on: https://localhost:7085
+2025-01-17 13:08:12.963 +03:00 [INF] Now listening on: http://localhost:5164
+2025-01-17 13:08:13.051 +03:00 [INF] Application started. Press Ctrl+C to shut down.
+2025-01-17 13:08:13.052 +03:00 [INF] Hosting environment: Development
+2025-01-17 13:08:13.052 +03:00 [INF] Content root path: C:\Users\akrasov\Source\Repos\Notes.Backend\Notes.WebApi
+2025-01-17 13:08:13.341 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7085/swagger/index.html - null null
+2025-01-17 13:08:13.493 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7085/swagger/index.html - 200 null text/html;charset=utf-8 155.8997ms
+2025-01-17 13:08:13.538 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7085/_framework/aspnetcore-browser-refresh.js - null null
+2025-01-17 13:08:13.538 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7085/swagger/index.js - null null
+2025-01-17 13:08:13.539 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7085/swagger/index.js - 200 null application/javascript;charset=utf-8 1.5288ms
+2025-01-17 13:08:13.546 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7085/_framework/aspnetcore-browser-refresh.js - 200 13776 application/javascript; charset=utf-8 8.291ms
+2025-01-17 13:08:13.553 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7085/_vs/browserLink - null null
+2025-01-17 13:08:13.575 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7085/_vs/browserLink - 200 null text/javascript; charset=UTF-8 22.7134ms
+2025-01-17 13:08:13.676 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7085/swagger/v1/swagger.json - null null
+2025-01-17 13:08:13.689 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7085/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 12.9081ms
+2025-01-17 13:08:51.630 +03:00 [INF] User profile is available. Using 'C:\Users\akrasov\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2025-01-17 13:08:52.034 +03:00 [INF] Now listening on: https://localhost:7085
+2025-01-17 13:08:52.034 +03:00 [INF] Now listening on: http://localhost:5164
+2025-01-17 13:08:52.112 +03:00 [INF] Application started. Press Ctrl+C to shut down.
+2025-01-17 13:08:52.113 +03:00 [INF] Hosting environment: Development
+2025-01-17 13:08:52.113 +03:00 [INF] Content root path: C:\Users\akrasov\Source\Repos\Notes.Backend\Notes.WebApi
+2025-01-17 13:08:52.889 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7085/swagger/index.html - null null
+2025-01-17 13:08:53.038 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7085/swagger/index.html - 200 null text/html;charset=utf-8 152.4281ms
+2025-01-17 13:08:53.080 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7085/swagger/index.js - null null
+2025-01-17 13:08:53.080 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7085/_framework/aspnetcore-browser-refresh.js - null null
+2025-01-17 13:08:53.081 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7085/swagger/index.js - 200 null application/javascript;charset=utf-8 1.2696ms
+2025-01-17 13:08:53.086 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7085/_framework/aspnetcore-browser-refresh.js - 200 13776 application/javascript; charset=utf-8 6.051ms
+2025-01-17 13:08:53.105 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7085/_vs/browserLink - null null
+2025-01-17 13:08:53.132 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7085/_vs/browserLink - 200 null text/javascript; charset=UTF-8 26.3427ms
+2025-01-17 13:08:53.244 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7085/swagger/v1/swagger.json - null null
+2025-01-17 13:08:53.261 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7085/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 17.0133ms
+2025-01-17 13:09:23.364 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7085/swagger/v2/swagger.json - null null
+2025-01-17 13:09:23.409 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7085/swagger/v2/swagger.json - 200 null application/json;charset=utf-8 45.3682ms
+2025-01-17 13:09:26.779 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7085/swagger/v1/swagger.json - null null
+2025-01-17 13:09:26.785 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7085/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 6.0726ms
+2025-01-17 13:09:28.354 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7085/swagger/v2/swagger.json - null null
+2025-01-17 13:09:28.360 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7085/swagger/v2/swagger.json - 200 null application/json;charset=utf-8 5.6124ms
+2025-01-17 13:09:30.107 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7085/swagger/v1/swagger.json - null null
+2025-01-17 13:09:30.111 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7085/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 4.2419ms
+2025-01-17 13:09:32.804 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7085/swagger/v2/swagger.json - null null
+2025-01-17 13:09:32.808 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7085/swagger/v2/swagger.json - 200 null application/json;charset=utf-8 4.3136ms
+2025-01-17 13:12:54.265 +03:00 [INF] User profile is available. Using 'C:\Users\akrasov\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2025-01-17 13:12:54.674 +03:00 [INF] Now listening on: https://localhost:7085
+2025-01-17 13:12:54.674 +03:00 [INF] Now listening on: http://localhost:5164
+2025-01-17 13:12:54.839 +03:00 [INF] Application started. Press Ctrl+C to shut down.
+2025-01-17 13:12:54.839 +03:00 [INF] Hosting environment: Development
+2025-01-17 13:12:54.839 +03:00 [INF] Content root path: C:\Users\akrasov\Source\Repos\Notes.Backend\Notes.WebApi
+2025-01-17 13:12:54.975 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7085/swagger/index.html - null null
+2025-01-17 13:12:55.125 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7085/swagger/index.html - 200 null text/html;charset=utf-8 154.5437ms
+2025-01-17 13:12:55.164 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7085/swagger/index.js - null null
+2025-01-17 13:12:55.164 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7085/_framework/aspnetcore-browser-refresh.js - null null
+2025-01-17 13:12:55.165 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7085/swagger/index.js - 200 null application/javascript;charset=utf-8 1.1375ms
+2025-01-17 13:12:55.169 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7085/_framework/aspnetcore-browser-refresh.js - 200 13776 application/javascript; charset=utf-8 5.7903ms
+2025-01-17 13:12:55.184 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7085/_vs/browserLink - null null
+2025-01-17 13:12:55.206 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7085/_vs/browserLink - 200 null text/javascript; charset=UTF-8 22.207ms
+2025-01-17 13:12:55.330 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7085/swagger/v1/swagger.json - null null
+2025-01-17 13:12:55.348 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7085/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 18.0748ms
+2025-01-17 13:15:27.657 +03:00 [INF] User profile is available. Using 'C:\Users\akrasov\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2025-01-17 13:15:28.121 +03:00 [INF] Now listening on: https://localhost:7085
+2025-01-17 13:15:28.122 +03:00 [INF] Now listening on: http://localhost:5164
+2025-01-17 13:15:28.512 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7085/swagger/index.html - null null
+2025-01-17 13:15:28.512 +03:00 [INF] Application started. Press Ctrl+C to shut down.
+2025-01-17 13:15:28.513 +03:00 [INF] Hosting environment: Development
+2025-01-17 13:15:28.513 +03:00 [INF] Content root path: C:\Users\akrasov\Source\Repos\Notes.Backend\Notes.WebApi
+2025-01-17 13:15:28.660 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7085/swagger/index.html - 200 null text/html;charset=utf-8 152.8298ms
+2025-01-17 13:15:28.705 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7085/swagger/index.js - null null
+2025-01-17 13:15:28.705 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7085/_framework/aspnetcore-browser-refresh.js - null null
+2025-01-17 13:15:28.707 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7085/swagger/index.js - 200 null application/javascript;charset=utf-8 2.3693ms
+2025-01-17 13:15:28.714 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7085/_framework/aspnetcore-browser-refresh.js - 200 13776 application/javascript; charset=utf-8 8.2811ms
+2025-01-17 13:15:28.725 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7085/_vs/browserLink - null null
+2025-01-17 13:15:28.757 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7085/_vs/browserLink - 200 null text/javascript; charset=UTF-8 31.7797ms
+2025-01-17 13:15:28.867 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7085/swagger/v1/swagger.json - null null
+2025-01-17 13:15:28.881 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7085/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 14.2294ms
+2025-01-17 13:16:50.623 +03:00 [INF] User profile is available. Using 'C:\Users\akrasov\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2025-01-17 13:16:50.998 +03:00 [INF] Now listening on: https://localhost:7085
+2025-01-17 13:16:50.998 +03:00 [INF] Now listening on: http://localhost:5164
+2025-01-17 13:16:51.080 +03:00 [INF] Application started. Press Ctrl+C to shut down.
+2025-01-17 13:16:51.081 +03:00 [INF] Hosting environment: Development
+2025-01-17 13:16:51.081 +03:00 [INF] Content root path: C:\Users\akrasov\Source\Repos\Notes.Backend\Notes.WebApi
+2025-01-17 13:16:51.493 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7085/swagger/index.html - null null
+2025-01-17 13:16:51.645 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7085/swagger/index.html - 200 null text/html;charset=utf-8 156.9414ms
+2025-01-17 13:16:51.678 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7085/swagger/index.js - null null
+2025-01-17 13:16:51.678 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7085/_framework/aspnetcore-browser-refresh.js - null null
+2025-01-17 13:16:51.680 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7085/swagger/index.js - 200 null application/javascript;charset=utf-8 1.6194ms
+2025-01-17 13:16:51.684 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7085/_framework/aspnetcore-browser-refresh.js - 200 13776 application/javascript; charset=utf-8 6.1273ms
+2025-01-17 13:16:51.705 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7085/_vs/browserLink - null null
+2025-01-17 13:16:51.728 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7085/_vs/browserLink - 200 null text/javascript; charset=UTF-8 23.2445ms
+2025-01-17 13:16:51.833 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7085/swagger/v1/swagger.json - null null
+2025-01-17 13:16:51.845 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7085/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 11.8193ms
+2025-01-17 13:17:13.863 +03:00 [INF] User profile is available. Using 'C:\Users\akrasov\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2025-01-17 13:17:14.264 +03:00 [INF] Now listening on: https://localhost:7085
+2025-01-17 13:17:14.265 +03:00 [INF] Now listening on: http://localhost:5164
+2025-01-17 13:17:14.343 +03:00 [INF] Application started. Press Ctrl+C to shut down.
+2025-01-17 13:17:14.344 +03:00 [INF] Hosting environment: Development
+2025-01-17 13:17:14.344 +03:00 [INF] Content root path: C:\Users\akrasov\Source\Repos\Notes.Backend\Notes.WebApi
+2025-01-17 13:17:14.662 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7085/swagger/index.html - null null
+2025-01-17 13:17:14.814 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7085/swagger/index.html - 200 null text/html;charset=utf-8 156.9218ms
+2025-01-17 13:17:14.861 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7085/swagger/index.js - null null
+2025-01-17 13:17:14.861 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7085/_framework/aspnetcore-browser-refresh.js - null null
+2025-01-17 13:17:14.864 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7085/swagger/index.js - 200 null application/javascript;charset=utf-8 2.4221ms
+2025-01-17 13:17:14.870 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7085/_framework/aspnetcore-browser-refresh.js - 200 13776 application/javascript; charset=utf-8 8.7441ms
+2025-01-17 13:17:14.874 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7085/_vs/browserLink - null null
+2025-01-17 13:17:14.899 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7085/_vs/browserLink - 200 null text/javascript; charset=UTF-8 24.6832ms
+2025-01-17 13:17:15.020 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7085/swagger/v1/swagger.json - null null
+2025-01-17 13:17:15.033 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7085/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 13.0039ms
+2025-01-17 13:17:51.257 +03:00 [INF] User profile is available. Using 'C:\Users\akrasov\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2025-01-17 13:17:51.691 +03:00 [INF] Now listening on: https://localhost:7085
+2025-01-17 13:17:51.691 +03:00 [INF] Now listening on: http://localhost:5164
+2025-01-17 13:17:51.767 +03:00 [INF] Application started. Press Ctrl+C to shut down.
+2025-01-17 13:17:51.767 +03:00 [INF] Hosting environment: Development
+2025-01-17 13:17:51.767 +03:00 [INF] Content root path: C:\Users\akrasov\Source\Repos\Notes.Backend\Notes.WebApi
+2025-01-17 13:18:09.113 +03:00 [INF] User profile is available. Using 'C:\Users\akrasov\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2025-01-17 13:18:09.539 +03:00 [INF] Now listening on: https://localhost:7085
+2025-01-17 13:18:09.539 +03:00 [INF] Now listening on: http://localhost:5164
+2025-01-17 13:18:09.610 +03:00 [INF] Application started. Press Ctrl+C to shut down.
+2025-01-17 13:18:09.610 +03:00 [INF] Hosting environment: Development
+2025-01-17 13:18:09.610 +03:00 [INF] Content root path: C:\Users\akrasov\Source\Repos\Notes.Backend\Notes.WebApi
+2025-01-17 13:21:08.614 +03:00 [INF] User profile is available. Using 'C:\Users\akrasov\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2025-01-17 13:21:08.993 +03:00 [INF] Now listening on: https://localhost:7085
+2025-01-17 13:21:08.994 +03:00 [INF] Now listening on: http://localhost:5164
+2025-01-17 13:21:09.340 +03:00 [INF] Application started. Press Ctrl+C to shut down.
+2025-01-17 13:21:09.340 +03:00 [INF] Hosting environment: Development
+2025-01-17 13:21:09.340 +03:00 [INF] Content root path: C:\Users\akrasov\Source\Repos\Notes.Backend\Notes.WebApi
+2025-01-17 13:21:09.415 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7085/swagger/index.html - null null
+2025-01-17 13:21:12.793 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7085/swagger/index.html - 200 null text/html;charset=utf-8 3382.49ms
+2025-01-17 13:21:12.859 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7085/_framework/aspnetcore-browser-refresh.js - null null
+2025-01-17 13:21:12.859 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7085/swagger/index.js - null null
+2025-01-17 13:21:12.860 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7085/swagger/index.js - 200 null application/javascript;charset=utf-8 1.4457ms
+2025-01-17 13:21:12.864 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7085/_framework/aspnetcore-browser-refresh.js - 200 13776 application/javascript; charset=utf-8 5.5341ms
+2025-01-17 13:21:12.883 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7085/_vs/browserLink - null null
+2025-01-17 13:21:12.904 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7085/_vs/browserLink - 200 null text/javascript; charset=UTF-8 21.3182ms
+2025-01-17 13:21:13.021 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7085/swagger/v1/swagger.json - null null
+2025-01-17 13:21:13.751 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7085/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 729.9334ms
+2025-01-17 13:21:30.996 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7085/swagger/index.html - null null
+2025-01-17 13:21:31.022 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7085/swagger/index.html - 200 null text/html;charset=utf-8 25.4724ms
+2025-01-17 13:21:31.050 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7085/swagger/index.js - null null
+2025-01-17 13:21:31.050 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7085/_vs/browserLink - null null
+2025-01-17 13:21:31.050 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7085/swagger/index.js - 200 null application/javascript;charset=utf-8 0.5253ms
+2025-01-17 13:21:31.051 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7085/_framework/aspnetcore-browser-refresh.js - null null
+2025-01-17 13:21:31.051 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7085/_framework/aspnetcore-browser-refresh.js - 200 13776 application/javascript; charset=utf-8 0.5991ms
+2025-01-17 13:21:31.061 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7085/_vs/browserLink - 200 null text/javascript; charset=UTF-8 11.1048ms
+2025-01-17 13:21:31.131 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7085/swagger/v1/swagger.json - null null
+2025-01-17 13:23:58.514 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7085/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 147384.751ms
+2025-01-17 13:23:59.455 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7085/swagger/index.html - null null
+2025-01-17 13:23:59.491 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7085/swagger/index.html - 200 null text/html;charset=utf-8 36.3457ms
+2025-01-17 13:23:59.539 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7085/swagger/index.js - null null
+2025-01-17 13:23:59.540 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7085/swagger/index.js - 200 null application/javascript;charset=utf-8 0.5783ms
+2025-01-17 13:23:59.540 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7085/_framework/aspnetcore-browser-refresh.js - null null
+2025-01-17 13:23:59.541 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7085/_framework/aspnetcore-browser-refresh.js - 200 13776 application/javascript; charset=utf-8 0.8931ms
+2025-01-17 13:23:59.542 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7085/_vs/browserLink - null null
+2025-01-17 13:23:59.547 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7085/_vs/browserLink - 200 null text/javascript; charset=UTF-8 5.3094ms
+2025-01-17 13:23:59.625 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7085/swagger/v1/swagger.json - null null
+2025-01-17 13:24:15.227 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7085/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 15601.5682ms
+2025-01-17 13:24:54.251 +03:00 [INF] User profile is available. Using 'C:\Users\akrasov\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2025-01-17 13:24:54.734 +03:00 [INF] Now listening on: https://localhost:7085
+2025-01-17 13:24:54.735 +03:00 [INF] Now listening on: http://localhost:5164
+2025-01-17 13:24:54.833 +03:00 [INF] Application started. Press Ctrl+C to shut down.
+2025-01-17 13:24:54.833 +03:00 [INF] Hosting environment: Development
+2025-01-17 13:24:54.833 +03:00 [INF] Content root path: C:\Users\akrasov\Source\Repos\Notes.Backend\Notes.WebApi
+2025-01-17 13:25:04.956 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7085/swagger/index.html - null null
+2025-01-17 13:25:05.103 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7085/swagger/index.html - 200 null text/html;charset=utf-8 150.7237ms
+2025-01-17 13:25:05.170 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7085/_framework/aspnetcore-browser-refresh.js - null null
+2025-01-17 13:25:05.170 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7085/swagger/index.js - null null
+2025-01-17 13:25:05.171 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7085/swagger/index.js - 200 null application/javascript;charset=utf-8 1.2181ms
+2025-01-17 13:25:05.175 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7085/_framework/aspnetcore-browser-refresh.js - 200 13776 application/javascript; charset=utf-8 5.529ms
+2025-01-17 13:25:05.193 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7085/_vs/browserLink - null null
+2025-01-17 13:25:05.215 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7085/_vs/browserLink - 200 null text/javascript; charset=UTF-8 22.015ms
+2025-01-17 13:25:05.327 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7085/swagger/v1/swagger.json - null null
+2025-01-17 13:25:05.339 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7085/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 12.3451ms
+2025-01-17 13:25:10.779 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7085/swagger/v2/swagger.json - null null
+2025-01-17 13:25:10.790 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7085/swagger/v2/swagger.json - 200 null application/json;charset=utf-8 10.9579ms
+2025-01-17 13:25:14.490 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7085/swagger/v1/swagger.json - null null
+2025-01-17 13:25:14.496 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7085/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 5.4272ms
+2025-01-17 13:25:24.437 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7085/api/v1/notes/10/10 - null null
+2025-01-17 13:25:24.531 +03:00 [INF] Authorization failed. These requirements were not met:
+DenyAnonymousAuthorizationRequirement: Requires an authenticated user.
+2025-01-17 13:25:24.533 +03:00 [INF] AuthenticationScheme: Bearer was challenged.
+2025-01-17 13:25:24.533 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7085/api/v1/notes/10/10 - 401 0 null 96.3663ms
+2025-01-17 13:25:31.645 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7085/api/v2/notes/10/10 - null null
+2025-01-17 13:25:31.668 +03:00 [INF] Authorization failed. These requirements were not met:
+DenyAnonymousAuthorizationRequirement: Requires an authenticated user.
+2025-01-17 13:25:31.668 +03:00 [INF] AuthenticationScheme: Bearer was challenged.
+2025-01-17 13:25:31.668 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7085/api/v2/notes/10/10 - 401 0 null 22.5363ms
+2025-01-17 13:25:36.704 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7085/api/notes/10/10 - null null
+2025-01-17 13:25:36.725 +03:00 [INF] Authorization failed. These requirements were not met:
+DenyAnonymousAuthorizationRequirement: Requires an authenticated user.
+2025-01-17 13:25:36.725 +03:00 [INF] AuthenticationScheme: Bearer was challenged.
+2025-01-17 13:25:36.725 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7085/api/notes/10/10 - 401 0 null 21.6586ms
+2025-01-17 13:27:16.192 +03:00 [INF] User profile is available. Using 'C:\Users\akrasov\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2025-01-17 13:27:16.607 +03:00 [INF] Now listening on: https://localhost:7085
+2025-01-17 13:27:16.608 +03:00 [INF] Now listening on: http://localhost:5164
+2025-01-17 13:27:16.862 +03:00 [INF] Application started. Press Ctrl+C to shut down.
+2025-01-17 13:27:16.862 +03:00 [INF] Hosting environment: Development
+2025-01-17 13:27:16.862 +03:00 [INF] Content root path: C:\Users\akrasov\Source\Repos\Notes.Backend\Notes.WebApi
+2025-01-17 13:27:16.921 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7085/swagger/index.html - null null
+2025-01-17 13:27:17.123 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7085/swagger/index.html - 200 null text/html;charset=utf-8 205.5241ms
+2025-01-17 13:27:17.158 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7085/swagger/index.js - null null
+2025-01-17 13:27:17.158 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7085/_framework/aspnetcore-browser-refresh.js - null null
+2025-01-17 13:27:17.160 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7085/swagger/index.js - 200 null application/javascript;charset=utf-8 2.0289ms
+2025-01-17 13:27:17.166 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7085/_framework/aspnetcore-browser-refresh.js - 200 13776 application/javascript; charset=utf-8 7.7697ms
+2025-01-17 13:27:17.188 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7085/_vs/browserLink - null null
+2025-01-17 13:27:17.222 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7085/_vs/browserLink - 200 null text/javascript; charset=UTF-8 33.7762ms
+2025-01-17 13:27:17.387 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7085/swagger/v1/swagger.json - null null
+2025-01-17 13:27:17.402 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7085/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 15.1854ms
+2025-01-17 13:27:22.298 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7085/api/v1/notes/1 - null null
+2025-01-17 13:27:22.395 +03:00 [INF] Executing endpoint 'Notes.WebApi.Controllers.V1.NoteController.Get (Notes.WebApi)'
+2025-01-17 13:27:22.406 +03:00 [INF] Route matched with {controller = "notes", action = "Get"}. Executing controller action with signature System.String Get(Int32) on controller Notes.WebApi.Controllers.V1.NoteController (Notes.WebApi).
+2025-01-17 13:27:22.510 +03:00 [INF] Executing action method Notes.WebApi.Controllers.V1.NoteController.Get (Notes.WebApi) - Validation state: "Valid"
+2025-01-17 13:27:22.513 +03:00 [INF] Executed action method Notes.WebApi.Controllers.V1.NoteController.Get (Notes.WebApi), returned result Microsoft.AspNetCore.Mvc.ObjectResult in 0.1731ms.
+2025-01-17 13:27:22.518 +03:00 [INF] Executing ObjectResult, writing value of type 'System.String'.
+2025-01-17 13:27:22.523 +03:00 [INF] Executed action Notes.WebApi.Controllers.V1.NoteController.Get (Notes.WebApi) in 115.5186ms
+2025-01-17 13:27:22.523 +03:00 [INF] Executed endpoint 'Notes.WebApi.Controllers.V1.NoteController.Get (Notes.WebApi)'
+2025-01-17 13:27:22.523 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7085/api/v1/notes/1 - 200 null application/json; charset=utf-8; X-Version=1 225.6894ms
+2025-01-17 13:27:29.060 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7085/api/v1/notes/1 - null null
+2025-01-17 13:27:29.079 +03:00 [INF] Executing endpoint 'Notes.WebApi.Controllers.V1.NoteController.Get (Notes.WebApi)'
+2025-01-17 13:27:29.079 +03:00 [INF] Route matched with {controller = "notes", action = "Get"}. Executing controller action with signature System.String Get(Int32) on controller Notes.WebApi.Controllers.V1.NoteController (Notes.WebApi).
+2025-01-17 13:27:29.095 +03:00 [INF] Executing action method Notes.WebApi.Controllers.V1.NoteController.Get (Notes.WebApi) - Validation state: "Valid"
+2025-01-17 13:27:29.095 +03:00 [INF] Executed action method Notes.WebApi.Controllers.V1.NoteController.Get (Notes.WebApi), returned result Microsoft.AspNetCore.Mvc.ObjectResult in 0.0357ms.
+2025-01-17 13:27:29.096 +03:00 [INF] Executing ObjectResult, writing value of type 'System.String'.
+2025-01-17 13:27:29.096 +03:00 [INF] Executed action Notes.WebApi.Controllers.V1.NoteController.Get (Notes.WebApi) in 16.8866ms
+2025-01-17 13:27:29.096 +03:00 [INF] Executed endpoint 'Notes.WebApi.Controllers.V1.NoteController.Get (Notes.WebApi)'
+2025-01-17 13:27:29.096 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7085/api/v1/notes/1 - 200 null application/json; charset=utf-8; X-Version=1 36.016ms
+2025-01-17 13:27:32.860 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7085/api/v12/notes/1 - null null
+2025-01-17 13:27:32.883 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7085/api/v12/notes/1 - 404 0 null 23.9421ms
+2025-01-17 13:27:32.884 +03:00 [INF] Request reached the end of the middleware pipeline without being handled by application code. Request path: GET https://localhost:7085/api/v12/notes/1, Response status code: 404
+2025-01-17 13:27:36.999 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7085/api/v2/notes/1 - null null
+2025-01-17 13:27:37.015 +03:00 [INF] Executing endpoint 'Notes.WebApi.Controllers.V2.NoteController.Get (Notes.WebApi)'
+2025-01-17 13:27:37.017 +03:00 [INF] Route matched with {controller = "notes", action = "Get"}. Executing controller action with signature System.String Get(Int32) on controller Notes.WebApi.Controllers.V2.NoteController (Notes.WebApi).
+2025-01-17 13:27:37.031 +03:00 [INF] Executing action method Notes.WebApi.Controllers.V2.NoteController.Get (Notes.WebApi) - Validation state: "Valid"
+2025-01-17 13:27:37.031 +03:00 [INF] Executed action method Notes.WebApi.Controllers.V2.NoteController.Get (Notes.WebApi), returned result Microsoft.AspNetCore.Mvc.ObjectResult in 0.1478ms.
+2025-01-17 13:27:37.032 +03:00 [INF] Executing ObjectResult, writing value of type 'System.String'.
+2025-01-17 13:27:37.032 +03:00 [INF] Executed action Notes.WebApi.Controllers.V2.NoteController.Get (Notes.WebApi) in 14.968ms
+2025-01-17 13:27:37.032 +03:00 [INF] Executed endpoint 'Notes.WebApi.Controllers.V2.NoteController.Get (Notes.WebApi)'
+2025-01-17 13:27:37.032 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7085/api/v2/notes/1 - 200 null application/json; charset=utf-8; X-Version=2 33.2671ms
+2025-01-17 13:27:42.188 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7085/api/notes/1 - null null
+2025-01-17 13:27:42.206 +03:00 [INF] Executing endpoint '400 Unsupported API Version'
+2025-01-17 13:27:42.207 +03:00 [INF] Executed endpoint '400 Unsupported API Version'
+2025-01-17 13:27:42.207 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7085/api/notes/1 - 400 0 null 18.6586ms
+2025-01-17 13:28:12.630 +03:00 [INF] User profile is available. Using 'C:\Users\akrasov\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2025-01-17 13:28:13.036 +03:00 [INF] Now listening on: https://localhost:7085
+2025-01-17 13:28:13.037 +03:00 [INF] Now listening on: http://localhost:5164
+2025-01-17 13:28:13.124 +03:00 [INF] Application started. Press Ctrl+C to shut down.
+2025-01-17 13:28:13.124 +03:00 [INF] Hosting environment: Development
+2025-01-17 13:28:13.124 +03:00 [INF] Content root path: C:\Users\akrasov\Source\Repos\Notes.Backend\Notes.WebApi
+2025-01-17 13:28:13.630 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7085/swagger/index.html - null null
+2025-01-17 13:28:13.777 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7085/swagger/index.html - 200 null text/html;charset=utf-8 150.1074ms
+2025-01-17 13:28:13.817 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7085/swagger/index.js - null null
+2025-01-17 13:28:13.817 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7085/_framework/aspnetcore-browser-refresh.js - null null
+2025-01-17 13:28:13.818 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7085/swagger/index.js - 200 null application/javascript;charset=utf-8 1.1547ms
+2025-01-17 13:28:13.822 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7085/_framework/aspnetcore-browser-refresh.js - 200 13776 application/javascript; charset=utf-8 5.1749ms
+2025-01-17 13:28:13.838 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7085/_vs/browserLink - null null
+2025-01-17 13:28:13.863 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7085/_vs/browserLink - 200 null text/javascript; charset=UTF-8 24.1459ms
+2025-01-17 13:28:13.968 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7085/swagger/v1/swagger.json - null null
+2025-01-17 13:28:13.988 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7085/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 20.0865ms
+2025-01-17 13:28:22.111 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7085/api/v1/notes/1 - null null
+2025-01-17 13:28:22.201 +03:00 [INF] Executing endpoint 'Notes.WebApi.Controllers.V1.NoteController.Get (Notes.WebApi)'
+2025-01-17 13:28:22.212 +03:00 [INF] Route matched with {controller = "notes", action = "Get"}. Executing controller action with signature System.String Get(Int32) on controller Notes.WebApi.Controllers.V1.NoteController (Notes.WebApi).
+2025-01-17 13:28:22.264 +03:00 [INF] Executing action method Notes.WebApi.Controllers.V1.NoteController.Get (Notes.WebApi) - Validation state: "Valid"
+2025-01-17 13:28:22.266 +03:00 [INF] Executed action method Notes.WebApi.Controllers.V1.NoteController.Get (Notes.WebApi), returned result Microsoft.AspNetCore.Mvc.ObjectResult in 0.1648ms.
+2025-01-17 13:28:22.270 +03:00 [INF] Executing ObjectResult, writing value of type 'System.String'.
+2025-01-17 13:28:22.276 +03:00 [INF] Executed action Notes.WebApi.Controllers.V1.NoteController.Get (Notes.WebApi) in 62.3361ms
+2025-01-17 13:28:22.277 +03:00 [INF] Executed endpoint 'Notes.WebApi.Controllers.V1.NoteController.Get (Notes.WebApi)'
+2025-01-17 13:28:22.277 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7085/api/v1/notes/1 - 200 null application/json; charset=utf-8; X-Version=1 165.6907ms
+2025-01-17 13:28:26.726 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7085/api/v1/notes/1 - null null
+2025-01-17 13:28:26.745 +03:00 [INF] Executing endpoint 'Notes.WebApi.Controllers.V1.NoteController.Get (Notes.WebApi)'
+2025-01-17 13:28:26.746 +03:00 [INF] Route matched with {controller = "notes", action = "Get"}. Executing controller action with signature System.String Get(Int32) on controller Notes.WebApi.Controllers.V1.NoteController (Notes.WebApi).
+2025-01-17 13:28:26.762 +03:00 [INF] Executing action method Notes.WebApi.Controllers.V1.NoteController.Get (Notes.WebApi) - Validation state: "Valid"
+2025-01-17 13:28:26.762 +03:00 [INF] Executed action method Notes.WebApi.Controllers.V1.NoteController.Get (Notes.WebApi), returned result Microsoft.AspNetCore.Mvc.ObjectResult in 0.0352ms.
+2025-01-17 13:28:26.763 +03:00 [INF] Executing ObjectResult, writing value of type 'System.String'.
+2025-01-17 13:28:26.763 +03:00 [INF] Executed action Notes.WebApi.Controllers.V1.NoteController.Get (Notes.WebApi) in 17.3004ms
+2025-01-17 13:28:26.763 +03:00 [INF] Executed endpoint 'Notes.WebApi.Controllers.V1.NoteController.Get (Notes.WebApi)'
+2025-01-17 13:28:26.763 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7085/api/v1/notes/1 - 200 null application/json; charset=utf-8; X-Version=1 37.6089ms
+2025-01-17 13:28:31.139 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7085/api/v2/notes/1 - null null
+2025-01-17 13:28:31.164 +03:00 [INF] Executing endpoint 'Notes.WebApi.Controllers.V2.NoteController.Get (Notes.WebApi)'
+2025-01-17 13:28:31.165 +03:00 [INF] Route matched with {controller = "notes", action = "Get"}. Executing controller action with signature System.String Get(Int32) on controller Notes.WebApi.Controllers.V2.NoteController (Notes.WebApi).
+2025-01-17 13:28:31.179 +03:00 [INF] Executing action method Notes.WebApi.Controllers.V2.NoteController.Get (Notes.WebApi) - Validation state: "Valid"
+2025-01-17 13:28:31.180 +03:00 [INF] Executed action method Notes.WebApi.Controllers.V2.NoteController.Get (Notes.WebApi), returned result Microsoft.AspNetCore.Mvc.ObjectResult in 0.164ms.
+2025-01-17 13:28:31.180 +03:00 [INF] Executing ObjectResult, writing value of type 'System.String'.
+2025-01-17 13:28:31.180 +03:00 [INF] Executed action Notes.WebApi.Controllers.V2.NoteController.Get (Notes.WebApi) in 15.1217ms
+2025-01-17 13:28:31.180 +03:00 [INF] Executed endpoint 'Notes.WebApi.Controllers.V2.NoteController.Get (Notes.WebApi)'
+2025-01-17 13:28:31.180 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7085/api/v2/notes/1 - 200 null application/json; charset=utf-8; X-Version=2 40.8037ms
+2025-01-17 13:28:35.909 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7085/api/notes/1 - null null
+2025-01-17 13:28:35.925 +03:00 [INF] Executing endpoint 'Notes.WebApi.Controllers.V1.NoteController.Get (Notes.WebApi)'
+2025-01-17 13:28:35.926 +03:00 [INF] Route matched with {controller = "notes", action = "Get"}. Executing controller action with signature System.String Get(Int32) on controller Notes.WebApi.Controllers.V1.NoteController (Notes.WebApi).
+2025-01-17 13:28:35.939 +03:00 [INF] Executing action method Notes.WebApi.Controllers.V1.NoteController.Get (Notes.WebApi) - Validation state: "Valid"
+2025-01-17 13:28:35.940 +03:00 [INF] Executed action method Notes.WebApi.Controllers.V1.NoteController.Get (Notes.WebApi), returned result Microsoft.AspNetCore.Mvc.ObjectResult in 0.0048ms.
+2025-01-17 13:28:35.940 +03:00 [INF] Executing ObjectResult, writing value of type 'System.String'.
+2025-01-17 13:28:35.940 +03:00 [INF] Executed action Notes.WebApi.Controllers.V1.NoteController.Get (Notes.WebApi) in 13.4848ms
+2025-01-17 13:28:35.940 +03:00 [INF] Executed endpoint 'Notes.WebApi.Controllers.V1.NoteController.Get (Notes.WebApi)'
+2025-01-17 13:28:35.940 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7085/api/notes/1 - 200 null application/json; charset=utf-8; X-Version=1.0 31.2581ms

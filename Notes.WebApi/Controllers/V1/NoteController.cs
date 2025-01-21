@@ -1,16 +1,18 @@
-﻿using MediatR;
+﻿using Asp.Versioning;
+using MediatR;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using Notes.Application.Notes.Commands.CreateNote;
 using Notes.Application.Notes.Commands.DeleteCommand;
 using Notes.Application.Notes.Commands.UpdateNote;
-using Notes.Application.Notes.Queries.GetNoteDetails;
 using Notes.Application.Notes.Queries.GetNoteList;
 
 namespace Notes.WebApi.Controllers.V1;
 
 [ApiVersion("1.0")]
+[ControllerName("notes")]
 [Produces("application/json")]
+[Route("api/[controller]")]
 [Route("api/v{version:apiVersion}/[controller]")]
 public class NoteController(IMediator mediator) : BaseController(mediator)
 {
@@ -18,7 +20,7 @@ public class NoteController(IMediator mediator) : BaseController(mediator)
     /// Gets the range of notes
     /// </summary>
     /// <remarks>
-    /// Sample request:
+    /// Sample request: countSkip, countTake
     /// GET /note
     /// </remarks>
     /// <returns>Returns List<NoteItemVm></returns>
@@ -57,17 +59,9 @@ public class NoteController(IMediator mediator) : BaseController(mediator)
     //[Authorize]
     [ProducesResponseType(StatusCodes.Status200OK)]
     [ProducesResponseType(StatusCodes.Status401Unauthorized)]
-    public async Task<ActionResult<NoteDetailsVm>> Get(Guid id)
+    public string Get(int id)
     {
-        var query = new GetNoteDetailsQuery
-        {
-            UserId = UserId,
-            Id = id
-        };
-
-        var vm = await _mediator.Send(query);
-
-        return Ok(vm);
+        return "Жопа1";
     }
 
     /// <summary>

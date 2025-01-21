@@ -1,5 +1,4 @@
-﻿using Microsoft.AspNetCore.Authentication.JwtBearer;
-using Microsoft.AspNetCore.Mvc;
+﻿using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.ApiExplorer;
 using Microsoft.AspNetCore.Mvc.Versioning;
 using Microsoft.Extensions.Options;
@@ -8,6 +7,14 @@ using Notes.Persistence;
 using Notes.WebApi.Configurations;
 using Notes.WebApi.Middleware;
 using Swashbuckle.AspNetCore.SwaggerGen;
+using Notes.Persistence;
+using Notes.Application;
+using Microsoft.AspNetCore.Authentication.JwtBearer;
+using Notes.WebApi.Middleware;
+using Asp.Versioning;
+using Asp.Versioning.ApiExplorer;
+using Notes.Application.Interfaces;
+using Notes.WebApi.Services;
 
 namespace Notes.WebApi;
 
@@ -42,23 +49,35 @@ public class Startup(IConfiguration configuration)
                 options.RequireHttpsMetadata = false;
             });
 
-        services.AddVersionedApiExplorer(options =>
-            options.GroupNameFormat = "'v'VVV");
 
         services.AddTransient<IConfigureOptions<SwaggerGenOptions>, ConfigureSwaggerOptions>();
 
-        services.AddSwaggerGen();
-        services.AddApiVersioning(config =>
+        services.AddSwaggerGen(c =>
         {
-            config.DefaultApiVersion = new ApiVersion(1, 0);
-            config.AssumeDefaultVersionWhenUnspecified = true;
-            config.ReportApiVersions = true;
-            config.ApiVersionReader = ApiVersionReader.Combine(
+            c.DocumentFilter<RemoveDuplicateEndpointsDocumentFilter>();
+        });
+
+        services.AddApiVersioning(options =>
+        {
+            options.AssumeDefaultVersionWhenUnspecified = true;
+            options.DefaultApiVersion = new ApiVersion(1, 0);
+            options.ReportApiVersions = true;
+            options.ApiVersionReader = ApiVersionReader.Combine(
                 new UrlSegmentApiVersionReader(),
                 new QueryStringApiVersionReader("api-version"),
-                new HeaderApiVersionReader("api-version")
-            );
+                new HeaderApiVersionReader("X-Version"),
+                new MediaTypeApiVersionReader("X-Version"));
+        })
+        .AddMvc()
+        .AddApiExplorer(options =>
+        {
+            options.GroupNameFormat = "'v'VVV";
+            options.SubstituteApiVersionInUrl = true;
+            options.AddApiVersionParametersWhenVersionNeutral = true;
         });
+
+        services.AddSingleton<ICurrentUserService, CurrentUserService>();
+        services.AddHttpContextAccessor();
     }
 
     public void Configure(IApplicationBuilder app, IWebHostEnvironment env, IApiVersionDescriptionProvider provider)
@@ -86,8 +105,6 @@ public class Startup(IConfiguration configuration)
 
         app.UseAuthentication();
         app.UseAuthorization();
-        
-        app.UseApiVersioning();
         
         app.UseEndpoints(endpoints =>
         {
