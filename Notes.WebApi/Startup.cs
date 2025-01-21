@@ -1,13 +1,13 @@
-﻿using Microsoft.AspNetCore.Mvc;
+﻿using Microsoft.AspNetCore.Authentication.JwtBearer;
+using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.ApiExplorer;
 using Microsoft.AspNetCore.Mvc.Versioning;
 using Microsoft.Extensions.Options;
-using Notes.WebApi.Configurations;
-using Swashbuckle.AspNetCore.SwaggerGen;
-using Notes.Persistence;
 using Notes.Application;
-using Microsoft.AspNetCore.Authentication.JwtBearer;
+using Notes.Persistence;
+using Notes.WebApi.Configurations;
 using Notes.WebApi.Middleware;
+using Swashbuckle.AspNetCore.SwaggerGen;
 
 namespace Notes.WebApi;
 
@@ -67,6 +67,7 @@ public class Startup(IConfiguration configuration)
         {
             app.UseDeveloperExceptionPage();
         }
+
         app.UseSwagger();
         app.UseSwaggerUI(config =>
         {
@@ -77,6 +78,7 @@ public class Startup(IConfiguration configuration)
                     description.GroupName.ToUpperInvariant());
             }
         });
+
         app.UseCustomExceptionHandler();
         app.UseRouting();
         app.UseHttpsRedirection();

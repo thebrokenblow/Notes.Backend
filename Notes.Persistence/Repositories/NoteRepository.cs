@@ -72,6 +72,8 @@ public class NoteRepository(NotesDbContext context) : INoteRepository
 
     public async Task<List<NoteItemVmDto>> GetRangeByUserIdAsync(Guid userId, int countSkip, int countTake, CancellationToken cancellationToken)
     {
+        var t = context.Notes.Count();
+
         var notes = await context.Notes
             .Select(note => new NoteItemVmDto
             { 
@@ -81,7 +83,7 @@ public class NoteRepository(NotesDbContext context) : INoteRepository
             })
             .Skip(countSkip)
             .Take(countTake)
-            .Where(note => note.UserId == userId)
+            .Where(note => note.Id == userId)
             .AsNoTracking()
             .ToListAsync(cancellationToken);
 

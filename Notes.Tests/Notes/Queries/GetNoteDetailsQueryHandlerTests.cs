@@ -1,32 +1,26 @@
-﻿using AutoMapper;
-using Notes.Application.Notes.Queries.GetNoteDetails;
-using Notes.Persistence;
-using Notes.Persistence.Repositories;
+﻿using Notes.Application.Notes.Queries.GetNoteDetails;
 using Notes.Tests.Common;
 
 namespace Notes.Tests.Notes.Queries;
 
-[Collection("QueryCollection")]
-public class GetNoteDetailsQueryHandlerTests(QueryTestFixture fixture)
+public class GetNoteDetailsQueryHandlerTests : TestBase
 {
-    private readonly NotesDbContext Context = fixture.Context;
-    private readonly IMapper Mapper = fixture.Mapper;
-
     [Fact]
     public async Task GetNoteDetailsQueryHandler_Success()
     {
         // Arrange
         
-        var noteRepository = new NoteRepository(Context);
         var handler = new GetNoteDetailsQueryHandler(noteRepository);
+        var getNoteDetailsQuery = new GetNoteDetailsQuery
+        {
+            UserId = NotesContextFactory.UserBId,
+            Id = Guid.Parse("909F7C29-891B-4BE1-8504-21F84F262084")
+        };
 
         // Act
+
         var result = await handler.Handle(
-            new GetNoteDetailsQuery
-            {
-                UserId = NotesContextFactory.UserBId,
-                Id = Guid.Parse("909F7C29-891B-4BE1-8504-21F84F262084")
-            },
+            getNoteDetailsQuery,
             CancellationToken.None);
 
         // Assert

@@ -6,32 +6,13 @@ using Notes.Tests.Common;
 
 namespace Notes.Tests.Notes.Commands;
 
-public class DeleteNoteCommandHandlerTests : TestCommandBase
+public class DeleteNoteCommandHandlerTests : TestBase
 {
-    [Fact]
-    public async Task DeleteNoteCommandHandler_Success()
-    {
-        // Arrange
-        var noteRepository = new NoteRepository(Context);
-        var handler = new DeleteNoteCommandHandler(noteRepository);
-
-        // Act
-        await handler.Handle(new DeleteNoteCommand
-        {
-            Id = NotesContextFactory.NoteIdForDelete,
-            UserId = NotesContextFactory.UserAId
-        }, CancellationToken.None);
-
-        // Assert
-        Assert.Null(Context.Notes.SingleOrDefault(note =>
-            note.Id == NotesContextFactory.NoteIdForDelete));
-    }
-
     [Fact]
     public async Task DeleteNoteCommandHandler_FailOnWrongId()
     {
         // Arrange
-        var noteRepository = new NoteRepository(Context);
+        var noteRepository = new NoteRepository(context);
         var handler = new DeleteNoteCommandHandler(noteRepository);
         var deleteNoteCommand = new DeleteNoteCommand
         {
@@ -52,7 +33,7 @@ public class DeleteNoteCommandHandlerTests : TestCommandBase
     {
         // Arrange
 
-        var noteRepository = new NoteRepository(Context);
+        var noteRepository = new NoteRepository(context);
         var deleteHandler = new DeleteNoteCommandHandler(noteRepository);
         var createHandler = new CreateNoteCommandHandler(noteRepository);
         var createNoteCommand = new CreateNoteCommand

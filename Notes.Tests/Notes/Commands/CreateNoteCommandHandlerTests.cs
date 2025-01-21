@@ -1,18 +1,16 @@
 ﻿using Microsoft.EntityFrameworkCore;
 using Notes.Application.Notes.Commands.CreateNote;
-using Notes.Persistence.Repositories;
 using Notes.Tests.Common;
 
 namespace Notes.Tests.Notes.Commands;
 
-public class CreateNoteCommandHandlerTests : TestCommandBase
+public class CreateNoteCommandHandlerTests : TestBase
 {
     [Fact]
     public async Task CreateNoteCommandHandler_Success()
     {
         // Arrange
 
-        var noteRepository = new NoteRepository(Context);
         var handler = new CreateNoteCommandHandler(noteRepository);
 
         var noteName = "note name";
@@ -26,14 +24,19 @@ public class CreateNoteCommandHandlerTests : TestCommandBase
         };
 
         // Act
+
         var noteId = await handler.Handle(
             createNoteCommand,
             CancellationToken.None);
-        
+
         // Assert
-        Assert.NotNull(
-            await Context.Notes.SingleOrDefaultAsync(note =>
-                note.Id == noteId && note.Title == noteName &&
-                note.Details == noteDetails));
+
+        var note = await context.Notes.SingleOrDefaultAsync(
+            note =>
+                note.Id == noteId && 
+                note.Title == noteName &&
+                note.Details == noteDetails);
+
+        Assert.NotNull(note);
     }
 }

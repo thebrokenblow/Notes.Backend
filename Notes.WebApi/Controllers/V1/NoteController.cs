@@ -11,7 +11,7 @@ namespace Notes.WebApi.Controllers.V1;
 
 [ApiVersion("1.0")]
 [Produces("application/json")]
-[Route("api/{version:apiVersion}/[controller]")]
+[Route("api/v{version:apiVersion}/[controller]")]
 public class NoteController(IMediator mediator) : BaseController(mediator)
 {
     /// <summary>
@@ -25,7 +25,7 @@ public class NoteController(IMediator mediator) : BaseController(mediator)
     /// <response code="200">Success</response>
     /// <response code="401">If the user is unauthorized</response>
     [HttpGet("{countSkip}/{countTake}")]
-    [Authorize]
+    //[Authorize]
     [ProducesResponseType(StatusCodes.Status201Created)]
     [ProducesResponseType(StatusCodes.Status401Unauthorized)]
     public async Task<ActionResult<List<NoteItemVm>>> GetRange(int countSkip, int countTake)
@@ -34,7 +34,7 @@ public class NoteController(IMediator mediator) : BaseController(mediator)
         {
             CountSkip = countSkip,
             CountTake = countTake,
-            UserId = UserId
+            UserId = Guid.NewGuid()
         };
 
         var vm = await _mediator.Send(query);
@@ -54,7 +54,7 @@ public class NoteController(IMediator mediator) : BaseController(mediator)
     /// <response code="200">Success</response>
     /// <response code="401">If the user in unauthorized</response>
     [HttpGet("{id}")]
-    [Authorize]
+    //[Authorize]
     [ProducesResponseType(StatusCodes.Status200OK)]
     [ProducesResponseType(StatusCodes.Status401Unauthorized)]
     public async Task<ActionResult<NoteDetailsVm>> Get(Guid id)
@@ -86,7 +86,7 @@ public class NoteController(IMediator mediator) : BaseController(mediator)
     /// <response code="201">Success</response>
     /// <response code="401">If the user is unauthorized</response>
     [HttpPost]
-    [Authorize]
+    //[Authorize]
     [ProducesResponseType(StatusCodes.Status201Created)]
     [ProducesResponseType(StatusCodes.Status401Unauthorized)]
     public async Task<ActionResult<Guid>> Create([FromBody] CreateNoteCommand createNoteCommand)
@@ -110,7 +110,7 @@ public class NoteController(IMediator mediator) : BaseController(mediator)
     /// <response code="204">Success</response>
     /// <response code="401">If the user is unauthorized</response>
     [HttpPut]
-    [Authorize]
+    //[Authorize]
     [ProducesResponseType(StatusCodes.Status204NoContent)]
     [ProducesResponseType(StatusCodes.Status401Unauthorized)]
     public async Task<IActionResult> Update([FromBody] UpdateNoteCommand updateNoteCommand)
@@ -131,7 +131,7 @@ public class NoteController(IMediator mediator) : BaseController(mediator)
     /// <response code="204">Success</response>
     /// <response code="401">If the user is unauthorized</response>
     [HttpDelete("{id}")]
-    [Authorize]
+    //[Authorize]
     [ProducesResponseType(StatusCodes.Status204NoContent)]
     [ProducesResponseType(StatusCodes.Status401Unauthorized)]
     public async Task<IActionResult> Delete(Guid id)

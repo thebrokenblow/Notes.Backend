@@ -5,10 +5,11 @@ namespace Notes.Tests.Common;
 
 public class NotesContextFactory
 {
-    public static Guid UserAId = Guid.NewGuid();
-    public static Guid UserBId = Guid.NewGuid();
-    public static Guid NoteIdForDelete = Guid.NewGuid();
-    public static Guid NoteIdForUpdate = Guid.NewGuid();
+    public static Guid UserAId => Guid.NewGuid();
+    public static Guid UserBId => Guid.NewGuid();
+    public static Guid NoteIdForDelete => Guid.NewGuid();
+    public static Guid NoteIdForUpdate => Guid.NewGuid();
+
     public static NotesDbContext Create()
     {
         var options = new DbContextOptionsBuilder<NotesDbContext>()
@@ -61,6 +62,7 @@ public class NotesContextFactory
 
         return context;
     }
+
     public static void Destroy(NotesDbContext context)
     {
         context.Database.EnsureDeleted();
